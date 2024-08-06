@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=devicewidth, initialscale=1.0">
+    <title>留言板</title>
+
+    <style>
+        body {
+            font-family: Arial, sansserif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label,
+        input,
+        textarea {
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #messages {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .message {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <h1>留言板</h1>
+    <form id="messageForm">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="message">留言：</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="提交">
+    </form>
+    <div id="messages"></div>
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
+            var messages = document.getElementById('messages');
+            var messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            messageDiv.innerHTML = '<strong>' + name + '：</strong>' + message;
+            messages.appendChild(messageDiv); // 将留言添加到留言板中
+            document.getElementById('name').value = ''; // 清空输入框内容
+            document.getElementById('message').value = ''; // 清空输入框内容
+        });
+    </script>
+</body>
+
+</html>
