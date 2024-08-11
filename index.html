@@ -53,31 +53,45 @@
         }
 
 
-        .introduction{
+        .introduction {
             margin-top: 20px;
         }
+
         #jieshao {
             text-align: center;
             font-family: kaiti;
-            text-decoration: underline      ;
+            text-decoration: underline;
         }
 
-        .photo {
-            margin-top: 20px;
+/* <picture> */
+        .pic {
+            width: 430px;
+            /* 块级元素，定义碰撞 */
+            height: 626px;
         }
 
-        .tupian {
-            height: 380px;
-            width: 380px;
-            text-align: center;
-            line-height: 100px;
-            margin: auto;
-            margin-top: 2%;
+        #pic1-1, #pic1-2, #pic1-3, #pic2-1, #pic2-2 {
+            width: 200px;
+            border: 1px solid red;
+            float: left;
         }
+
+        #pic2-1, #pic2-2 {
+            margin-left: 5px;
+        }
+        #pic1-2 {
+            margin-top: -206px;
+        }
+        #pic1-3 {
+            margin-left: 0px;
+        }
+/* </picture> */
 
         .shengming {
             position: relative;
+            right: 0px;
         }
+
         #gongjin {
             position: absolute;
             right: 0;
@@ -107,18 +121,21 @@
         <p id="jieshao">你好我是公瑾，是一个无聊的人</p>
     </div>
 
-    <div class="photo">
-        <div class="tupian">
-            <img src="https://s2.loli.net/2024/08/06/kfu4OcJli1YaXAh.jpg" alt="小狗" height="380px" width="380px"
-                id="xiaogou">
+    <div class="pic">
+        <div id="pic1-1">
+            <img src="https://s2.loli.net/2024/08/06/GJhSwzxFqPHfo6M.jpg" alt="1-1" width="200px">
         </div>
-
-        <div class="tupian">
-            <img src="https://s2.loli.net/2024/08/06/GJhSwzxFqPHfo6M.jpg" alt="诗雅" height="380px" width="380px">
+        <div id="pic2-1">
+            <img src="https://s2.loli.net/2024/08/12/3LixrcPFB9qQl1m.jpg" alt="2-1" width="200px" height="414px">
         </div>
-
-        <div class="tupian">
-            <img src="https://s2.loli.net/2024/08/06/bimLjKNYAZnhsf9.jpg" alt="" height="380px" width="380px">
+        <div id="pic1-2">
+            <img src="https://s2.loli.net/2024/08/06/kfu4OcJli1YaXAh.jpg" alt="1-2" width="200px">
+        </div>
+        <div id="pic1-3">
+            <img src="https://s2.loli.net/2024/08/06/cQxLwCme96tpSiA.jpg" alt="1-3" width="200px">
+        </div>
+        <div id="pic2-2">
+            <img src="https://s2.loli.net/2024/08/06/bimLjKNYAZnhsf9.jpg" alt="2-2" width="200px">
         </div>
     </div>
 
